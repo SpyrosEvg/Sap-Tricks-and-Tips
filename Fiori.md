@@ -166,19 +166,7 @@
  :soon: Coming Soon 
  
  # Expose Standard App to Fiori (Techical Catalog)
-  First you nee to go to  <a href ="https://fioriappslibrary.hana.ondemand.com/">Fiori App Library </a> <br>
-  There Select <i>All Apps</i> and then Search with <i>App ID </i> or <i>Title</i> of the App you are looking for
-  ##
-  Select The Version of your System Fiori 
-  <img width="313" alt="image" src="https://github.com/SpyrosEvg/Abap_Code/assets/39948427/5e5f2536-925f-4ec9-90dc-66408268b896">
-  ##
-  Next go to <i>Implementation Information</i> amd then to <i>Configuration</i>
-  <img width="313" alt="image" src="https://github.com/user-attachments/assets/a999395b-111e-4c81-9c19-79d354df37a0">
-  
-  <img width="61" alt="image" src="https://github.com/SpyrosEvg/Abap_Code/assets/39948427/c1784d65-ffa9-4e9e-832f-9fb02000c184">
-  <img width="423" alt="image" src="https://github.com/SpyrosEvg/Abap_Code/assets/39948427/0951b900-859e-4d48-9bef-04f67daa24be">
-  
-  <img width="192" alt="image" src="https://github.com/SpyrosEvg/Abap_Code/assets/39948427/a7f63dd5-fcc7-4aa1-a12f-93f788edf601">
+ :soon: Coming Soon
 
  # Authorization Issues 
  :soon: Coming Soon
