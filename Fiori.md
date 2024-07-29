@@ -154,7 +154,7 @@
  <img width="30" alt="image" src="https://github.com/SpyrosEvg/Abap_Code/assets/39948427/468b3be5-13f5-47d2-854d-af68e2a22827"> <br>
  ##
  Also in the <i>Users</i> Tab you can put the Users you want to use this role
- 
+ ##
  >[!NOTE]
  > In order to tranport a role, in the initial screen of the transaction there a
  > <img width="600" alt="image" src="https://github.com/user-attachments/assets/8a0db830-fd01-4084-a848-e782cbc573e3"><br>
@@ -166,11 +166,15 @@
  :soon: Coming Soon 
  
  # Expose Standard App to Fiori (Techical Catalog)
-  https://fioriappslibrary.hana.ondemand.com/ -> All Apps -> Search with T-Code or Title 
-  Select The Version of your Fiori 
-  Implementation Information -> Configuration
-
+  First you nee to go to  <a href ="https://fioriappslibrary.hana.ondemand.com/">Fiori App Library </a> <br>
+  There Select <i>All Apps</i> and then Search with <i>App ID </i> or <i>Title</i> of the App you are looking for
+  ##
+  Select The Version of your System Fiori 
   <img width="313" alt="image" src="https://github.com/SpyrosEvg/Abap_Code/assets/39948427/5e5f2536-925f-4ec9-90dc-66408268b896">
+  ##
+  Next go to <i>Implementation Information</i> amd then to <i>Configuration</i>
+  <img width="313" alt="image" src="https://github.com/user-attachments/assets/a999395b-111e-4c81-9c19-79d354df37a0">
+  
   <img width="61" alt="image" src="https://github.com/SpyrosEvg/Abap_Code/assets/39948427/c1784d65-ffa9-4e9e-832f-9fb02000c184">
   <img width="423" alt="image" src="https://github.com/SpyrosEvg/Abap_Code/assets/39948427/0951b900-859e-4d48-9bef-04f67daa24be">
   
