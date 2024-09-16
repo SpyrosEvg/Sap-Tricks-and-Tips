@@ -1,4 +1,4 @@
-<h1> Fiori :cherry_blossom: </h1>
+<h1> Fiori </h1>
 
 - [Expose Z* Program to Fiori](#Expose-Z*-Program-to-Fiori)<br>
   - [Create Semantic Object](#Creaete-Semantic-Object)
