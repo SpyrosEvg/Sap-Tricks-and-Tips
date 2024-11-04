@@ -1,6 +1,6 @@
 <h1> Fiori </h1>
 
-- [Expose Z* Program to Fiori](#Expose-Z*-Program-to-Fiori)<br>
+- [Expose Z* Program Or Standard Transaction to Fiori](#Expose-Z*-Program-Or-Standard-Transaction-to-Fiori)<br>
   - [Create Semantic Object](#Creaete-Semantic-Object)
   - [Create A Customazing Transport Request (Optional)](#Create-A-Customazing-Transport-Request)
   - [Create Tile](#Create-App-Tile)
@@ -9,13 +9,13 @@
   - [Create Business Catalog Target Mapping](#Create-Business-Catalog-Target-Mapping)
   - [Create Business Group](#Create-Business-Group)
   - [Create Role](#Create-Role)
-  - [Tile Translation](#Tile-Translation)
+  - [Custom Tile Translation](#Costom-Tile-Translation)
 - [Expose Standard App to Fiori (Techical Catalog)](#Expose-Standard-App-to-Fiori)
 - [Authorization Issues](#Authorization-Issues)
 - [Copy Standard Role to Z*](#Copy-Standard-Role-to-Z*)
 - [Fiori T-Codes](#Fiori-T-Codes)
   
-# Expose Z* Program to Fiori
+# Expose Z* Program Or Standard Transaction to Fiori
 
  ## Create Semantic Object
   T-Code - To define custom Semantic objects : `/N/UI2/SEMOBJ`<BR>
@@ -162,14 +162,86 @@
  > If you make any changes in Business Catalog you need to remove and enter it again <br>
  > and you need to generate the Authorizations again
  
- ## Tile Translation 
- :soon: Coming Soon 
- 
- # Expose Standard App to Fiori (Techical Catalog)
- :soon: Coming Soon
+ ## Custom Tile Translation 
+ First you need to go in Transaction Code `/UI2/FLP`
+ and enter the Catalog of the tiles that need to be translated
+ <img width="350" alt="image" src="https://github.com/user-attachments/assets/acacbd81-6c45-4b4f-99ab-84506de6ddf4"> <br>
+ Then in the second Screen Select the tile you want to translate <br>
+ <img width="550" alt="image" src="https://github.com/user-attachments/assets/67d73131-1df8-48eb-a854-3c047296948f"> <br>
+ After that, another Screen will appear <br>
+ <img width="550" alt="image" src="https://github.com/user-attachments/assets/81ec6bad-4682-4faa-bb87-d70d66b836a4"> <br>
+ Here you have 2 <i>Config IDs</i> , one for Tile and one for Target Mapping (TM). <br>
+ You need to Translate Both. <br>
+ Take the Config IDs and go to Transaction Code `SE63` -> <i>Short Text</i> -> <i>00 Meta Objects</i> -> <i>TABL Tables</i> <br>
+ <img width="550" alt="image" src="https://github.com/user-attachments/assets/92b1fc80-d591-4742-a0cc-16067963b7f6"> <br>
+ Here put in the Object Name <i>* WDY_CONF_USERT2 *</i> (Without Spaces in *), select the translation languages, press enter and put the Config ID<br>
+ <img width="550" alt="image" src="https://github.com/user-attachments/assets/e697b5a8-7cb3-4484-b458-3d9ad12300b6"> <br>
+ Do the Transaltion that you want and Save it. <br>
 
+ After this in order to Transport the Transaltions go to Transaction Code `SLXT` <br>
+ Select the Target Language of the translation that you made in the previous Step, <br>
+ enter the Processing Date of the translation , <br>
+ enter in the fields <i>Object Type = * </i>  and <i>Object Processor = Your Username </i>
+ and Execute.
+
+ A Transport Request will appear in the `SE10`.
+
+ > [!IMPORTANT]
+ > If the Translation does not appear you need to Clear the Back-End Cache , <br>
+ > To Do this, call transaction SE38 and run the report /UI2/INVALIDATE_GLOBAL_CACHES in execution mode <br>
+
+ >Reference Document : https://help.sap.com/docs/UI_ADD-ON_FOR_SAP_NETWEAVER_20/17ae0e97e0fc424a9c368f350c0ba6bd/4c9eb085d3884bdca468d7ec284be2e2.html
+
+ # Expose Standard App to Fiori (Techical Catalog)
+ Same Times SAP provides the solution to export Standard Transaction in Fiori.<br>
+ When you want to Export Standard Transaction into Fiori the First thing to do is to go in [Fiori Libraty](https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/#)
+ -> All Apps -> Search of the Transaction <br>
+ There select the Version of the Fiori <br>
+ <img width="350" alt="image" src="https://github.com/user-attachments/assets/36840fb1-3a9f-4bcd-81ba-21a12af5f254"> <br>
+ And then Go to <i>Implementation Information</i> -> <i>Configuration</i> <br>
+ <img width="350" alt="image" src="https://github.com/user-attachments/assets/62eb69cf-1dac-4777-8ce2-7eca840f98d7"> <br>
+ >[!NOTE]
+ > Here you see all the relevant informations about the APP <br>
+ > Technical Catalog, Business Catalog, Business Group, OData, SAPUI5 , Tile Title , Semantic Object , Target Mapping etc. 
+
+ If you see a Role in the Configuration then you can assign the Role into the user and the user can see the App in Fiori Lanchpad <br>
+ but if you dont see the Role then you have to create one. <br>
+
+ Now lets see how you can do that. <br>
+
+ First , create a [Business Catalog](#Create-Business-Catalog-Tile) (If you dont have one ) Without a Tile or Target Mapping , those you will be take them from Technical Catalog <br>
+
+ Then take the Technical Catalog from the Fiori Library and Search it in the `/N/UI2/FLPD_CUST` Launch SAP FIORI Launchpad designer <br>
+ In the Tile section <br>
+ <img width="350" alt="image" src="https://github.com/user-attachments/assets/03c94e30-a93f-4bba-98a2-179888140e72"> <br>
+ Look for the App you are intrested in and drag it so the <i>Create Reference</i> icon appears <br>
+ <img width="350" alt="image" src="https://github.com/user-attachments/assets/9d814e16-c9b1-4bfb-a948-ec54227607dd"> <br>
+ When you will drag there , you will be asked to Select a Catalog then choose the Business Catalog you created above. <br>
+ Do the Same with Target Mapping <br>
+ <img width="350" alt="image" src="https://github.com/user-attachments/assets/9971c29d-791e-4015-b813-2ca2829ebbb6"> <br>
+ Reference Option is in Buttom Rigth Corner <br>
+ <img width="350" alt="image" src="https://github.com/user-attachments/assets/011035a9-8005-4b91-a807-434e19cfbe0b"> <br>
+
+ Then Put it or Create a [Business Group](#Create-Business-Group) and a [Role](#Create-Role) <br>
+ 
+
+ > [!IMPORTANT]
+ > When you create something with Reference you cant change it or Translate it. <br>
+ > Basically, when something is Referenced if SAP makes a change in the App the app will be updated, <br>
+ > If you want to Change and Translate the App you need to break the Reference 
+ 
+ 
  # Authorization Issues 
- :soon: Coming Soon
+ When the user have Authorization Errors you need to go in Transaction `SU53` <br>
+ and Select the Icon ![image](https://github.com/user-attachments/assets/4302c73a-7c8d-4b45-b081-f82f6c8b560d) <br>
+ to see the authorization errors from a diffrent user.
+
+ Here you need to see the Column <i>Application Name</i> to match the App which the error occurs <br>
+ Then take the <i>Authorization Object</i> and its <i>Values</i> and put it in the role of the app with the errors. <br>
+
+ In the Role, go to Authorizations Tab with Change and press the <i>Manually</i> Button ![image](https://github.com/user-attachments/assets/213e159e-6bad-4855-907a-3dca41ef1f69) <br>
+ Enter the Authorization Object , maintain the Values from SU53 and Generate the Profile.
+
  # Copy Standard Role to Z*
  :soon: Coming Soon
 
