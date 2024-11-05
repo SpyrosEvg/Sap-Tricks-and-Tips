@@ -9,7 +9,7 @@
   - [Create Business Catalog Target Mapping](#Create-Business-Catalog-Target-Mapping)
   - [Create Business Group](#Create-Business-Group)
   - [Create Role](#Create-Role)
-  - [Custom Tile Translation](#Costom-Tile-Translation)
+  - [Custom Tile Translation](#Custom-Tile-Translation)
 - [Expose Standard App to Fiori (Techical Catalog)](#Expose-Standard-App-to-Fiori)
 - [Authorization Issues](#Authorization-Issues)
 - [Copy Standard Role to Z*](#Copy-Standard-Role-to-Z*)
@@ -192,7 +192,7 @@
 
  >Reference Document : https://help.sap.com/docs/UI_ADD-ON_FOR_SAP_NETWEAVER_20/17ae0e97e0fc424a9c368f350c0ba6bd/4c9eb085d3884bdca468d7ec284be2e2.html
 
- # Expose Standard App to Fiori (Techical Catalog)
+ # Expose Standard App to Fiori
  Same Times SAP provides the solution to export Standard Transaction in Fiori.<br>
  When you want to Export Standard Transaction into Fiori the First thing to do is to go in [Fiori Libraty](https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/#)
  -> All Apps -> Search of the Transaction <br>
@@ -243,7 +243,45 @@
  Enter the Authorization Object , maintain the Values from SU53 and Generate the Profile.
 
  # Copy Standard Role to Z*
- :soon: Coming Soon
+ It is importan to Copy Standard Roles in order to add extra Authorization Objects.
+ You can Copy Standard Role to Z but to be activated properly you need to do some extra steps. <br>
+ If you dont then the user whould see any tiles.<br>
+ 
+ First , go to [Fiori Libraty](https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/#)
+ -> All Apps -> Search of the Transaction <br>
+ Search for the App you want
+ There select the Version of the Fiori <br>
+ <img width="350" alt="image" src="https://github.com/user-attachments/assets/36840fb1-3a9f-4bcd-81ba-21a12af5f254"> <br>
+ And then Go to <i>Implementation Information</i> -> <i>Configuration</i> <br>
+ <img width="350" alt="image" src="https://github.com/user-attachments/assets/62eb69cf-1dac-4777-8ce2-7eca840f98d7"> <br>
+ The Role is always in the Bottom. <br>
+
+ Then, go to `PFCG` enter the role and press the <i>Copy</i> Button ![image](https://github.com/user-attachments/assets/4eb63a75-5cbb-4dd7-9226-4c5b81373ce3)
+ and provide below the name of the Z* Role and <i>Copy All</i> ![image](https://github.com/user-attachments/assets/cddb8453-5c17-4c5e-ad13-f69a12aff841) .
+
+ >[!NOTE]
+ > To put the Role into Transport Request you need to press the <i>Transport</i> ![image](https://github.com/user-attachments/assets/5515af5d-2fd0-4c17-8e02-45394048521f)
+
+ After that, go to Transactional Code `STC01` and enter the <i>SAP_FIORI_FCM_CONTENT_ACTIVATION</i> in the task list and press Execute <br>
+ ![image](https://github.com/user-attachments/assets/bd05359a-6d9b-428d-b35d-b88b9ab5a88a) <br>
+
+ Inside press the Button Below <br>
+ Selected![image](https://github.com/user-attachments/assets/b817d259-677b-4552-85f7-a48f81b8b57f) <br>
+
+ Filter the Z Role and Select it <br>
+ Select ![image](https://github.com/user-attachments/assets/3dc8e84e-1a24-4556-899d-62e470543b88) <br>
+ 
+ Save and go Back <br>
+
+ You Should be Seen something like this <br>
+ 1 Selected ![image](https://github.com/user-attachments/assets/89cca2e5-62fd-41f1-99b2-50f60864704b) <br>
+
+ And Press <i>Execute</i>
+
+ In the End you should see Success Message <br>
+ Success Message ![image](https://github.com/user-attachments/assets/86cee224-dd67-42a2-a60b-e43f4fe886a0)
+
+ And then you need to go in `PFCG` Activate the Authorization Data and the Role is Ready!
 
  # Fiori T-Codes
 
