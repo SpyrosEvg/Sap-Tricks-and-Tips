@@ -12,7 +12,7 @@
   - [Custom Tile Translation](#Custom-Tile-Translation)
 - [Expose Standard App to Fiori (Techical Catalog)](#Expose-Standard-App-to-Fiori)
 - [Authorization Issues](#Authorization-Issues)
-- [Copy Standard Role to Z*](#Copy-Standard-Role-to-Z*)
+- [Copy Standard Role to Z](#Copy-Standard-Role-to-Z)
 - [Fiori T-Codes](#Fiori-T-Codes)
   
 # Expose Z* Program Or Standard Transaction to Fiori
@@ -242,7 +242,7 @@
  In the Role, go to Authorizations Tab with Change and press the <i>Manually</i> Button ![image](https://github.com/user-attachments/assets/213e159e-6bad-4855-907a-3dca41ef1f69) <br>
  Enter the Authorization Object , maintain the Values from SU53 and Generate the Profile.
 
- # Copy Standard Role to Z*
+ # Copy Standard Role to Z
  It is importan to Copy Standard Roles in order to add extra Authorization Objects.
  You can Copy Standard Role to Z but to be activated properly you need to do some extra steps. <br>
  If you dont then the user whould see any tiles.<br>
