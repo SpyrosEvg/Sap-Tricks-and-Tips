@@ -248,8 +248,7 @@
  If you dont then the user whould see any tiles.<br>
  
  First , go to [Fiori Libraty](https://fioriappslibrary.hana.ondemand.com/sap/fix/externalViewer/#)
- -> All Apps -> Search of the Transaction <br>
- Search for the App you want
+ -> All Apps -> Search for the App you want <br>
  There select the Version of the Fiori <br>
  <img width="350" alt="image" src="https://github.com/user-attachments/assets/36840fb1-3a9f-4bcd-81ba-21a12af5f254"> <br>
  And then Go to <i>Implementation Information</i> -> <i>Configuration</i> <br>
@@ -266,15 +265,15 @@
  ![image](https://github.com/user-attachments/assets/bd05359a-6d9b-428d-b35d-b88b9ab5a88a) <br>
 
  Inside press the Button Below <br>
- Selected![image](https://github.com/user-attachments/assets/b817d259-677b-4552-85f7-a48f81b8b57f) <br>
+ ![image](https://github.com/user-attachments/assets/b817d259-677b-4552-85f7-a48f81b8b57f) <br>
 
  Filter the Z Role and Select it <br>
- Select ![image](https://github.com/user-attachments/assets/3dc8e84e-1a24-4556-899d-62e470543b88) <br>
+ ![image](https://github.com/user-attachments/assets/3dc8e84e-1a24-4556-899d-62e470543b88) <br>
  
  Save and go Back <br>
 
  You Should be Seen something like this <br>
- 1 Selected ![image](https://github.com/user-attachments/assets/89cca2e5-62fd-41f1-99b2-50f60864704b) <br>
+ ![image](https://github.com/user-attachments/assets/89cca2e5-62fd-41f1-99b2-50f60864704b) <br>
 
  And Press <i>Execute</i>
 
