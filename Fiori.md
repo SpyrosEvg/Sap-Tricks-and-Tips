@@ -14,6 +14,7 @@
 - [Authorization Issues](#Authorization-Issues)
 - [Copy Standard Role to Z](#Copy-Standard-Role-to-Z)
 - [Fiori T-Codes](#Fiori-T-Codes)
+- [Links](#Links)
   
 # Expose Z* Program Or Standard Transaction to Fiori
 
@@ -282,6 +283,9 @@
 
  And then you need to go in `PFCG` Activate the Authorization Data and the Role is Ready!
 
+ >[!NOTE]
+ >Reference Document : https://community.sap.com/t5/technology-blogs-by-members/sap-fiori-sap-business-role-activation-using-task-list-sap-fiori-fcm/ba-p/13524612
+
  # Fiori T-Codes
 
  | Tcode	| Description |
@@ -303,3 +307,6 @@
  | /n/IWFND/CACHE_CLEANUP | Clear BackEnd |
  | /n/IWBEP/CACHE_CLEANUP | Clear FrontEnd|
  | /n/IWFND/V4_ADMIN      |  For Odata Group|
+
+ # Links
+ [Fiori for S/4HANA - Troubleshooting Tips and Tricks](https://www.sap.com/documents/2017/11/9abe236d-df7c-0010-82c7-eda71af511fa.html)
