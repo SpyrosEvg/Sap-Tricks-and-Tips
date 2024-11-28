@@ -104,7 +104,7 @@
   Fill the Title and ID  <br>
   <img width="250" alt="image" src="https://github.com/SpyrosEvg/Abap_Code/assets/39948427/ad9a09fd-ef7b-4205-af4e-3e84b12667c3"> <br>
   >[!NOTE]
-  > <i>ID</i> must start with Z* and BG* Example : Z_BG_TEST
+  > <i>ID</i> must start with Z* and BCG* Example : Z_BCG_TEST
   > Its Case-sensitive
 
   ##
