@@ -164,7 +164,7 @@
  > and you need to generate the Authorizations again
  
  ## Custom Tile Translation 
- First you need to go in Transaction Code `/UI2/FLP`
+ First you need to go in Transaction Code `/UI2/FLC`
  and enter the Catalog of the tiles that need to be translated
  <img width="350" alt="image" src="https://github.com/user-attachments/assets/acacbd81-6c45-4b4f-99ab-84506de6ddf4"> <br>
  Then in the second Screen Select the tile you want to translate <br>
