@@ -293,6 +293,8 @@
  | /UI2/FLP               |	Launch SAP FIORI Launchpad|
  | /UI2/FLPD_CUST	        | Launch SAP FIORI Launchpad designer for customization ( client- specific )|
  | /UI2/FLPD_CONF	        | Launch SAP FIORI Launchpad designer for configuration ( cross-client ) |
+ | /UI2/FLPCM_CUST        | Launchpad Content Manager for customization ( client- specific )|
+ | /UI2/FLPCM_CONF        | Launchpad Content Manager  ( client- specific )|
  | /UI2/CUST	            | SAP FIORI Implementation Guide |
  | /UI2/FLC	              | Fiori Launchpad checks |
  | /UI2/FLIA	            | Fiori Launchpad Intent analysis |
